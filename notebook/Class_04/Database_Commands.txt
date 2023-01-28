@@ -1,0 +1,26 @@
+
+
+CREATE TABLE salary_info (
+	id INT NOT NULL,
+	age INT,
+	workclass CHAR(25),
+	fnlwgt INT,
+	education CHAR(25),
+	education_num INT, 
+	marital_status CHAR(25),
+	occupation CHAR(25),
+	relationship CHAR(25),
+	race CHAR(25),
+	sex CHAR(25),
+	capital_gain INT,
+	capital_loss INT,
+	hours_per_week INT,
+	native_country CHAR(25),
+	class CHAR(25)
+);
+
+LOAD DATA LOCAL INFILE 'csv_result-phpMawTba.csv'
+REPLACE INTO TABLE salary_info
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
